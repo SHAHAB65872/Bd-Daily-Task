@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827"><title>BD Daily Task</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header><div class="brand"><div class="logo">BD</div><div><b>BD Daily Task</b><small>Earn • Complete • Grow</small></div></div><div class="avatar">৳</div></header>
+  <section class="welcome"><span class="eyebrow">WELCOME BACK</span><h1>হ্যালো! 👋</h1><p>ছোট ছোট কাজ সম্পন্ন করে রিওয়ার্ড সংগ্রহ করুন।</p></section>
+  <section class="balance"><div><span>আপনার মোট ব্যালেন্স</span><h2 id="balance">৳0.00</h2><small>BDT Wallet</small></div><div class="coin">৳</div></section>
+  <div class="section-title"><h3>ইনকাম করুন</h3><span>৪টি উপায়</span></div>
+  <div class="grid">
+    <button class="tile" id="checkin"><span class="tile-icon gold">🎁</span><b>Daily Check-in</b><small>প্রতিদিন বোনাস</small></button>
+    <button class="tile" onclick="notice('বিজ্ঞাপন নেটওয়ার্ক যুক্ত হলে এই সুবিধা চালু হবে।')"><span class="tile-icon blue">▶️</span><b>Watch Ads</b><small>বিজ্ঞাপন দেখে আয়</small></button>
+    <button class="tile" onclick="notice('অ্যাডমিনের প্রকাশিত কাজ এখানে দেখানো হবে।')"><span class="tile-icon purple">🎯</span><b>Daily Task</b><small>কাজ সম্পন্ন করুন</small></button>
+    <button class="tile" id="refer"><span class="tile-icon green">👥</span><b>Refer & Earn</b><small>বন্ধুকে আমন্ত্রণ</small></button>
+  </div>
+  <div class="section-title"><h3>টাকা তুলুন</h3><span>নিরাপদ আবেদন</span></div>
+  <section class="withdraw">
+    <div class="methods"><span> bKash </span><span> Nagad </span><span> Rocket </span></div>
+    <label>পেমেন্ট মাধ্যম</label><select id="method"><option>bKash</option><option>Nagad</option><option>Rocket</option></select>
+    <label>১১ সংখ্যার অ্যাকাউন্ট নম্বর</label><input id="account" inputmode="numeric" maxlength="11" placeholder="01XXXXXXXXX">
+    <label>টাকার পরিমাণ (ন্যূনতম ৳১০০)</label><input id="amount" type="number" min="100" placeholder="100">
+    <button class="primary" id="withdraw">উত্তোলনের আবেদন করুন</button>
+    <small class="hint">আবেদন অ্যাডমিন যাচাই করবেন। পেমেন্ট নিশ্চিত হওয়ার আগে কোনো আয়কে নিশ্চিত ধরে নেবেন না।</small>
+  </section>
+  <div class="section-title"><h3>সাম্প্রতিক লেনদেন</h3></div>
+  <section class="history" id="history"><p class="muted">লেনদেন লোড হচ্ছে…</p></section>
+  <footer>BD Daily Task <span>•</span> Earn responsibly</footer>
+</div>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
